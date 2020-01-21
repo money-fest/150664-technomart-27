@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/27/user/150664).
-* Наставник: `Неизвестно`.
+* Студент: [Ирина](https://up.htmlacademy.ru/htmlcss/27/user/150664).
+* Наставник: Анатолий Пазюк, https://htmlacademy.ru/profile/id380487.
 
 ---
 
