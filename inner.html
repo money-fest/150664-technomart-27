@@ -45,9 +45,62 @@
             <li><a href="#">Перфораторы</a></li>
         </ul>
 
+        <p>
+            Сортировка:
+            <a href="#">По цене</a>
+            <a href="#">По типу</a>
+            <a href="#">По функционалу</a>
+        </p>
+        
         <section>
             <h2>Фильтр товаров</h2>
-            <!--Тут будет форма-->
+            <form action="https://echo.htmlacademy.ru/courses" method="post">
+                <p>Фильтр:</p>
+        
+                <fieldset>
+                    <legend>Цена:</legend>
+                    <input type="range" name="price" id="price" min="0" max="30000" step="100" value="25000"> 
+                    <span>0</span> - <span>30000</span>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Производители:</legend>
+                    <label>
+                        <input type="checkbox" name="bosch" checked>
+                        BOSCH
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interskol">
+                        ИНТЕРСКОЛ
+                    </label>
+                    <label>
+                        <input type="checkbox" name="makita" checked>
+                        MAKITA
+                    </label>
+                    <label>
+                        <input type="checkbox" name="dewalt">
+                        Dewalt
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hitachi">
+                        Hitachi
+                    </label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Питание:</legend>
+                    <label>
+                        <input type="radio" name="power" value="battery" checked>
+                        Аккумуляторные
+                    </label>
+                    <label>
+                        <input type="radio" name="power" value="electric">
+                        Сетевые
+                    </label>
+                </fieldset>
+        
+                <input type="submit" value="Показать">
+            </form>
         </section>
 
         <section>
@@ -169,6 +222,22 @@
                 </li>
             </ul>
         </section>
+
+        <ul>
+            <li><a>1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">Следующая</a></li>
+        </ul>
+        
+        <article>
+            <h2>Пара слов о перфораторах</h2>
+            <p>
+                Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+                Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, 
+                шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+            </p>
+        </article>
     </main>
 
     <footer>
