@@ -61,6 +61,8 @@
             <a href="#">По цене</a>
             <a href="#">По типу</a>
             <a href="#">По функционалу</a>
+            <a href="#">Сортировка по возрастанию</a>
+            <a href="#">Сортировка по убыванию</a>
         </div>
         
         <section>
@@ -70,8 +72,14 @@
         
                 <fieldset>
                     <legend>Цена:</legend>
-                    <input type="range" name="price" id="price" min="0" max="30000" step="100" value="25000"> 
-                    <span>0</span> - <span>30000</span>
+                    <div class="price-range">
+                        <div class="price-line"></div>
+                        <div class="price-min"></div>
+                        <div class="price-max"></div>
+                    </div>
+                    <input type="text" name="price-min" value="0">
+                    <span>-</span>
+                    <input type="text" name="price-max" value="30000">
                 </fieldset>
                 
                 <fieldset>
