@@ -50,6 +50,10 @@ a {
 }
 
 .main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
@@ -58,11 +62,24 @@ a {
     background-color: #f4f7f8;
 }
 
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header-wrapper-top {
+    margin-bottom: 46px;
+    /* width: 100%; */
     background-color: #293449;
 }
 
 .header-logo {
+    margin-right: 17px;
     background-color: #ee3643;
     box-shadow: 0px -5px 0 0 rgba(0, 0, 0, 0.24) inset;
 }
@@ -94,7 +111,17 @@ a {
 }
 
 .cart-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    width: 435px;
     list-style: none;
+}
+
+.cart-list li {
+    margin-right: ;
 }
 
 .cart-list a {
@@ -133,9 +160,26 @@ a {
     background-color: #518534;
 }
 
+.header-wrapper-middle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
 .site-title {
+    margin: 0;
+    margin-left: 50px;
+    padding: 0;
+    width: 198px;
+
+    font-size: 16px;
+    line-height: 23px;
     font-style: italic;
     color: #ee3643;
+}
+
+.header-contacts {
+    width: 270px;
 }
 
 .header-phone-number {
@@ -152,6 +196,10 @@ a {
 }
 
 .user-login-list {
+    display: flex;
+    width: 281px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -160,9 +208,7 @@ a {
     line-height: 21px;
     vertical-align: middle;
     text-align: center;
-    color: #000000;
-
-    background-color: #ffffff;
+    color: #000000;   
 }
 
 .user-login-list a:hover,
@@ -174,7 +220,26 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.login {
+    width: 121px;
+    height: 45px;
+    margin-right: 10px;
+    background-color: #ffffff;
+}
+
+.logon {
+    height: 45px;
+    width: 150px;
+    background-color: #ffffff;
+}
+
+.user-navigation {
+    width: 299px;
+}
+
 .user-name {
+    font-size: 21px;
+    line-height: 21px;
     color: #000000;
 }
 
@@ -185,6 +250,7 @@ a {
 
 .header-orders,
 .header-account {
+    font-size: 16px;
     text-decoration: underline;
     color: #32425c;
 }
@@ -202,11 +268,18 @@ a {
 }
 
 .main-nav {
+    margin-bottom: 60px;
+
     background-color: #32425c;
     box-shadow: 0px -5px 0 0 #293449 inset;
 }
 
 .main-nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    padding: 22px 55px 26px 52px;
     list-style: none;
 }
 
@@ -342,6 +415,7 @@ a {
 }
 
 .services {
+    margin-bottom: 82px;
     background-color: #f4f7f9;
 }
 
@@ -410,14 +484,31 @@ a {
 
 }
 
+.delivery {
+    width: 520px;
+}
+
 .delivery h2{
+    margin: 0;
+    margin-bottom: 39px;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
 }
 
+.delivery p {
+    margin: 0;
+}
+
+.delivery p:first-of-type {
+    margin-bottom: 36px;
+}
+
 .delivery ul {
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 37px;
     list-style: none;
 }
 
@@ -427,7 +518,13 @@ a {
     line-height: 20px;
 }
 
+.contacts {
+    width: 300px;
+}
+
 .contacts h2 {
+    margin: 0;
+    margin-bottom: 39px;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
@@ -435,7 +532,28 @@ a {
     color: #000000;
 }
 
+.contacts p {
+    margin: 0;
+    margin-bottom: 36px;
+}
+
+.contacts .button {
+    margin-top: 40px;
+}
+
+.page-title-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
 .page-title {
+    order: 1;
+
+    margin: 0;
+    padding: 33px 30px;
+
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
@@ -446,6 +564,7 @@ a {
 }
 
 .breadcrumbs {
+    margin: 0;
     list-style: none;
 }
 
@@ -455,33 +574,12 @@ a {
     color: #000000;
 }
 
-.sort {
-    line-height: 18px;
-    text-transform: uppercase;
-
-    background-color: #f7f3ec;
-}
-
-.sort a {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: #ee3643;
-    color: rgba(0, 0, 0, 0.18);
-}
-
-.sort a:hover,
-.sort a:focus {
-    color: #000000;
-    text-decoration-style: solid;
-
-}
-
-.sort a:active {
-    color: #ee3643;
-    text-decoration: none;
+.filters {
+    width: 220px;
 }
 
 .filter-title {
+    margin: 0;
     text-transform: uppercase;
     line-height: 18px;
 
@@ -543,12 +641,60 @@ a {
     border: 1px solid #e5e5e5;
 }
 
+.sort {
+    margin-bottom: 20px;
+    
+    line-height: 18px;
+    text-transform: uppercase;
+
+    background-color: #f7f3ec;
+}
+
+.sort p {
+    margin: 0;
+}
+
+.sort a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #ee3643;
+    color: rgba(0, 0, 0, 0.18);
+}
+
+.sort a:hover,
+.sort a:focus {
+    color: #000000;
+    text-decoration-style: solid;
+
+}
+
+.sort a:active {
+    color: #ee3643;
+    text-decoration: none;
+}
+
+.catalog {
+    width: 700px;
+}
+
 .catalog-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
 .catalog-item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 218px;
+
     border: 1px solid #e5e5e5;
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .catalog-item:hover {
@@ -684,19 +830,42 @@ a {
 }
 
 .main-footer {
+    margin-top: 86px;
+
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 18px;
 
     background-color: #32425c;
 }
 
+.main-footer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-wrapper-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+    padding-bottom: 45px;
+}
+
 .footer-logo {
+    width: 220px;
     background-color: #ee3643;
     box-shadow: 0px -5px 0 0 rgba(0, 0, 0, 0.24) inset;
 }
 
 .main-footer ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
 }
 
 .footer-navigation a {
@@ -713,9 +882,26 @@ a {
     color: rgba(241, 245, 247, 0.5);
 }
 
+.footer-wrapper-middle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 53px;
+}
+
+.footer-contacts {
+    margin: 0;
+    width: 322px;
+}
+
 .footer-contacts,
 .footer-contacts a {
     color: #f3f7f9;
+}
+
+.footer-offers {
+    display: flex;
+    justify-content: space-between;
+    width: 527px;
 }
 
 .footer-offers a {
@@ -733,6 +919,8 @@ a {
 }
 
 .footer-wrapper-bottom {
+    padding-top: 39px;
+    padding-bottom: 35px;
     font-size: 16px;
     line-height: 18px;
 
@@ -758,6 +946,15 @@ a {
 .footer-email,
 .footer-created {
     color: #ffd180;
+}
+
+p.footer-email {
+    margin-right: 53px;
+    width: 140px;
+}
+
+p.footer-created {
+    width: 100px;
 }
 
 .footer-email:hover,
