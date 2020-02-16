@@ -65,6 +65,7 @@ a {
 .container {
     width: 940px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .columns {
@@ -83,7 +84,7 @@ a {
     padding-top: 13px;
     width: 220px;
     height: 29px;
-    margin-right: 17px;
+    /* margin-right: 17px; */
     background-color: #ee3643;
     box-shadow: 0px 5px 0 0 #b52933;
     
@@ -102,23 +103,33 @@ a {
 }
 
 .search {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
     margin-top: auto;
     margin-bottom: auto;
     background-color: #293449;
 }
 
-.search input[type="search"] {
+.search input[type="text"]::placeholder {
     color: #ffffff;
-    min-height: 42px;
-    background-color: #293449;
-    border: none;
 }
 
-.search input[type="search"]:hover {
+.search input[type="text"] {
+    min-height: 40px;
+    background-color: #293449;
+    border: none;
+    width: 100%;
+    padding-left: 17px;
+    outline: 0;
+}
+
+.search input[type="text"]:hover {
     background-color: #212a3a;
 }
 
-.search input[type="search"]:focus {
+.search input[type="text"]:focus,
+.search input[type="text"]:active {
     color: #000000;
 
     background-color: #ffffff;
@@ -134,13 +145,6 @@ a {
     list-style: none;
 }
 
-.cart-list li {
-    padding-top: 12px;
-    padding-bottom: 11px;
-    padding-right: 22px;
-    padding-left: 20px;
-}
-
 .cart-list a {
     color: #ffffff;
 }
@@ -150,6 +154,16 @@ a {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
+}
+
+.bookmarks a,
+.cart a {
+    display: block;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 22px;
+    padding-left: 20px;
 }
 
 .bookmarks:hover,
@@ -170,6 +184,10 @@ a {
     flex-grow: 0;
     width: 108px;
     margin-left: auto;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 22px;
+    padding-left: 20px;
 
     text-align: center;
     vertical-align: middle;
@@ -190,7 +208,6 @@ a {
 
 .header-wrapper-middle {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 41px;
 }
 
@@ -199,6 +216,7 @@ a {
     margin-left: 52px;
     padding: 0;
     margin-top: 3px;
+    margin-right: 71px;
     width: 198px;
 
     font-size: 16px;
@@ -209,6 +227,7 @@ a {
 
 .header-contacts {
     width: 270px;
+    /* margin: 0 auto; */
 }
 
 .header-phone-number {
@@ -237,18 +256,22 @@ a {
     width: 281px;
     margin: 0;
     margin-bottom: auto;
+    margin-left: auto;
     padding: 0;
     list-style: none;
 }
 
 .user-login-list li {
     min-height: 21px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
 }
 
 .user-login-list a {
+    display: block;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+
     font-size: 21px;
     line-height: 21px;
 
@@ -277,12 +300,20 @@ a {
 
 .user-navigation {
     width: 299px;
+    margin-left: auto;
 }
 
 .user-name {
+    display: block;
+    min-width: 299px;
+    min-height: 33px;
+    padding-top: 12px;
+    margin-bottom: 8px;
     font-size: 21px;
     line-height: 21px;
     color: #000000;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .user-name:focus,
@@ -292,6 +323,8 @@ a {
 
 .header-orders,
 .header-account {
+    display: inline-block;
+    margin: 0 17px;
     font-size: 16px;
     text-decoration: underline;
     color: #32425c;
@@ -330,12 +363,14 @@ a {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    padding-top: 18px;
-    padding-bottom: 23px;
-    text-align: center;
 }
 
 .main-nav-list a {
+    display: block;
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 23px;
+    text-align: center;
     color: #ffffff;
 }
 
@@ -615,7 +650,7 @@ a {
     order: 1;
 
     margin: 0;
-    padding: 33px 30px;
+    padding: 30px 28px 29px;
 
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
@@ -628,7 +663,13 @@ a {
 
 .breadcrumbs {
     margin: 0;
+    margin-top: 19px;
+    margin-bottom: 16px;
     list-style: none;
+}
+
+.breadcrumbs li {
+    display: inline-block;
 }
 
 .breadcrumbs a {
@@ -642,6 +683,9 @@ a {
 }
 
 .filter-title {
+    min-height: 27px;
+    padding-left: 18px;
+    padding-top: 11px;
     margin: 0;
     text-transform: uppercase;
     line-height: 18px;
@@ -650,6 +694,8 @@ a {
 }
 
 .filter fieldset {
+    margin: 0;
+    padding: 0;
     border: none;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -661,7 +707,7 @@ a {
 .filter legend {
     font-size: 17px;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 50px;
     text-transform: uppercase;
 }
 
@@ -672,21 +718,31 @@ a {
 .price-range {
     width: 220px;
     height: 80px;
+    margin-top: 4px;
+    margin-bottom: 9px;
 
     background-color: #f7f3ec;
 }
 
-.price-min,
-.price-max {
+input.price-min,
+input.price-max {
+    width: 95px;
+    min-height: 38px;
+    margin-bottom: 25px;
+    padding: 0;
+    
     font-size: 17px;
     line-height: 18px;
+    text-align: center;
 
     background-color: #f7f3ec;
     border: none;
 }
 
 .price-min + span {
-    font-size: 16px;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 18px;
     line-height: 18px;
     color: #444444;
 }
@@ -705,6 +761,7 @@ a {
 }
 
 .sort {
+    min-height: 38px;
     margin-bottom: 20px;
 
     line-height: 18px;
@@ -749,6 +806,8 @@ a {
 }
 
 .catalog-item {
+    display: flex;
+    flex-direction: column;
     margin-right: 20px;
     margin-bottom: 20px;
     width: 218px;
@@ -765,9 +824,20 @@ a {
 }
 
 .catalog-item-title {
+    margin: 0;
+    margin-top: 9px;
+    margin-bottom: 11px;
     font-size: 18px;
     line-height: 20px;
     text-align: center;
+}
+
+.catalog-item img {
+    order: -1;
+}
+
+.catalog-item p {
+    margin: 0;
 }
 
 .catalog-item-first-price,
@@ -787,6 +857,7 @@ a {
 
     line-height: 38px;
     color: #ffffff;
+    text-align: center;
 
     background-image: url("../img/red-button.svg");
     background-position: 0 0;
@@ -991,11 +1062,35 @@ a {
     background-color: #293449;
 }
 
+.footer-wrapper-bottom .container {
+    display: flex;
+}
+
 .footer-wrapper-bottom p {
     margin: 0;
+    color: #ffffff;
+}
+
+.footer-wrapper-bottom .footer-copyright {
+    width: 232px;
+    margin-right: 159px;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 132px;
+    text-align: center;
 }
 
 .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
     background-color: #212a3a;
 
     border-radius: 50%;
@@ -1007,8 +1102,8 @@ a {
     background-color: #ee3643;
 }
 
-.footer-wrapper-bottom p {
-    color: #ffffff;
+.footer-wrapper-bottom .columns {
+    margin-left: auto;
 }
 
 .footer-email,
