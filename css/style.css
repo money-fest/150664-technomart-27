@@ -41,9 +41,11 @@ img {
     background-color: #ba2732;
 }
 
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
+    display: block;
     position: absolute;
 
     width: 1px;
@@ -143,6 +145,7 @@ input[type="radio"].visually-hidden {
 
 .search input[type="text"] {
     display: block;
+    
     box-sizing: border-box;
     width: 100%;
     min-height: 40px;
@@ -2107,6 +2110,10 @@ p.footer-created {
     box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
+.modal-show {
+    display: block;
+}
+
 .big-map {
     width: 940px;
     height: 446px;
@@ -2116,7 +2123,7 @@ p.footer-created {
     box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 
-.feedback {
+.modal-feedback {
     min-height: 386px;
     margin-bottom: 100px;
     padding-bottom: 37px;
@@ -2270,7 +2277,7 @@ p.footer-created {
     background-color: #ffffff;
 }
 
-.close-button {
+.modal-close {
     position: absolute;
     top: 9px;
     right: 9px;
