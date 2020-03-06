@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&display=swap&subset=latin,cyrillic" rel="stylesheet"> -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -30,8 +29,8 @@
           </form>
     
           <ul class="cart-list">
-            <li class="bookmarks bookmarks--active"><a href="#">Закладки: 0</a></li>
-            <li class="cart cart--active"><a href="#">Корзина: 0</a></li>
+            <li class="bookmarks"><a href="#">Закладки: 0</a></li>
+            <li class="cart"><a href="#">Корзина: 0</a></li>
             <li class="order"><a href="#">Оформить заказ</a></li>
           </ul>
         </div>
@@ -41,7 +40,7 @@
         <div class="header-wrapper-middle">
           <p class="site-title">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
           <div class="header-contacts">
-            <a class="header-phone-number" href="+78125550555">+7 (812) 555-05-55</a>
+            <a class="header-phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <ul class="user-login-list">
@@ -101,8 +100,14 @@
               <img src="img/slide-2.jpg" width="620" height="266" alt="Работа перфоратором">
               <a class="button" href="inner.html">Открыть каталог</a>
             </div>
-              <button class="slider-button slider-button-left" type="button" aria-label="Предыдущий слайд"></button>
-              <button class="slider-button slider-button-right" type="button" aria-label="Следующий слайд"></button>
+            <button class="slider-button slider-button-left" type="button" aria-label="Предыдущий слайд"></button>
+            <button class="slider-button slider-button-right" type="button" aria-label="Следующий слайд"></button>
+            <div class="slider-controls">
+              <input class="slider-toggle visually-hidden" type="radio" id="slide-1" name="toggle">
+              <label for="slide-1">Первый</label>
+              <input class="slider-toggle visually-hidden" type="radio" id="slide-2" name="toggle" checked>
+              <label for="slide-1">Второй</label>
+            </div>
           </div>
           
           <div class="promo-item promo-sale">Скидки 50%<a href="#">На 350 товаров</a></div>
@@ -280,7 +285,7 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <a class="contacts-map" href="https://goo.gl/maps/6iiLuGEUfR9q5frX9"><img src="img/map.png" width="300" height="158" alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Б.Конюшенная, д.19/8"></a>
-          <button class="button feedback-button" type="button">Заблудились? Напишите нам!</button>
+          <a class="button feedback-button" href="form.html">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -304,7 +309,7 @@
         <div class="footer-wrapper-middle">
           <p class="footer-contacts">
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            <a href="+78125550555">+7 (812) 555-05-55</a>
+            <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </p>
           <ul class="footer-offers">
             <li><a href="#">Материалы</a></li>
